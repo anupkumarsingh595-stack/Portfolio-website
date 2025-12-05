@@ -722,7 +722,7 @@
                 <h3>Email</h3>
                 <p>anupkumarsingh595@gmail.com</p>
             </a>
-            <a href="https://www.linkedin.com/in/anupkumarsingh" class="contact-item" target="_blank">
+            <a href="https://www.linkedin.com/in/anup-kumar-singh-6405b128b/" class="contact-item" target="_blank">
                 <div style="font-size: 2.5rem; margin-bottom: 1rem;">💼</div>
                 <h3>LinkedIn</h3>
                 <p>Connect with me</p>
