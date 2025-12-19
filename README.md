@@ -1,846 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
+<div align="center">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anup Kumar Singh - Network Engineer & AI Security Researcher</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        /* Animated Background */
-        
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(45deg, #0a0a0a, #1a1a2e, #16213e);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-        /* Matrix Rain Effect */
-        
-        .matrix {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.15;
-        }
-        /* Navigation */
-        
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem 5%;
-            z-index: 1000;
-            border-bottom: 2px solid #00ff41;
-            box-shadow: 0 4px 30px rgba(0, 255, 65, 0.2);
-        }
-        
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            list-style: none;
-        }
-        
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        nav a:hover {
-            color: #00ff41;
-            transform: translateY(-2px);
-        }
-        
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #00ff41;
-            transition: width 0.3s;
-        }
-        
-        nav a:hover::after {
-            width: 100%;
-        }
-        /* Hero Section */
-        
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-        }
-        /* PROFILE IMAGE */
-        
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin: 0 auto 1.2rem;
-            border: 5px solid rgba(0, 217, 255, 0.9);
-            box-shadow: 0 0 30px rgba(0, 217, 255, 0.35);
-            overflow: hidden;
-            display: inline-block;
-        }
-        
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #00ff41, #00d9ff, #ff10f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 3s ease-in-out infinite;
-        }
-        
-        @keyframes glow {
-            0%,
-            100% {
-                filter: brightness(1);
-            }
-            50% {
-                filter: brightness(1.5);
-            }
-        }
-        
-        .hero-content h2 {
-            font-size: 2rem;
-            color: #00d9ff;
-            margin-bottom: 1rem;
-        }
-        
-        .typing-text {
-            font-size: 1.5rem;
-            color: #00ff41;
-            height: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .cursor {
-            display: inline-block;
-            width: 3px;
-            background: #00ff41;
-            animation: blink 0.7s infinite;
-        }
-        
-        @keyframes blink {
-            0%,
-            50% {
-                opacity: 1;
-            }
-            51%,
-            100% {
-                opacity: 0;
-            }
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 3rem;
-        }
-        
-        .btn {
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            border: 2px solid #00ff41;
-            background: transparent;
-            color: #00ff41;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: #00ff41;
-            transition: left 0.3s;
-            z-index: -1;
-        }
-        
-        .btn:hover::before {
-            left: 0;
-        }
-        
-        .btn:hover {
-            color: #0a0a0a;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.4);
-        }
-        /* Section Styles */
-        
-        section {
-            padding: 6rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        h2 {
-            font-size: 3rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            background: linear-gradient(45deg, #00ff41, #00d9ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        /* Skills Section */
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 2px solid #00ff41;
-            border-radius: 15px;
-            padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 255, 65, 0.1), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .skill-card:hover::before {
-            opacity: 1;
-            animation: rotate 4s linear infinite;
-        }
-        
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 255, 65, 0.3);
-            border-color: #00d9ff;
-        }
-        
-        .skill-card h3 {
-            color: #00ff41;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .tag {
-            background: rgba(0, 255, 65, 0.2);
-            color: #00ff41;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid #00ff41;
-        }
-        /* Projects Section */
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 2px solid #00d9ff;
-            border-radius: 15px;
-            padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .project-card:hover::after {
-            left: 100%;
-        }
-        
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.3);
-        }
-        
-        .project-card h3 {
-            color: #00d9ff;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-card p {
-            color: #ccc;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        /* Certifications */
-        
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .cert-card {
-            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 217, 255, 0.1));
-            backdrop-filter: blur(10px);
-            border: 2px solid #ff10f0;
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        
-        .cert-card:hover {
-            transform: translateY(-10px) rotate(2deg);
-            box-shadow: 0 15px 40px rgba(255, 16, 240, 0.3);
-        }
-        
-        .cert-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cert-card h3 {
-            color: #ff10f0;
-            margin-bottom: 0.5rem;
-        }
-        /* Contact Section */
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .contact-item {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 2px solid #00ff41;
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s;
-            text-decoration: none;
-            color: #fff;
-            display: block;
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 255, 65, 0.3);
-            background: rgba(0, 255, 65, 0.1);
-        }
-        
-        .contact-item i {
-            font-size: 2.5rem;
-            color: #00ff41;
-            margin-bottom: 1rem;
-        }
-        /* Scroll Progress */
-        
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00ff41, #00d9ff, #ff10f0);
-            z-index: 1001;
-            transition: width 0.1s;
-        }
-        /* Responsive */
-        
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            .hero-content h2 {
-                font-size: 1.5rem;
-            }
-            .typing-text {
-                font-size: 1.2rem;
-            }
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .cta-buttons {
-                flex-direction: column;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-            .profile-image {
-                width: 140px;
-                height: 140px;
-                border-width: 4px;
-            }
-        }
-        /* Floating Particles */
-        
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: #00ff41;
-            border-radius: 50%;
-            animation: float 6s infinite;
-        }
-        
-        @keyframes float {
-            0%,
-            100% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(100px);
-            }
-        }
-    </style>
-</head>
+# 👨‍💻 ANUP KUMAR SINGH  
+### Network Architect | AI Security Researcher | Cybersecurity Specialist
 
-<body>
-    <div class="bg-animation"></div>
-    <canvas class="matrix"></canvas>
-    <div class="scroll-progress" id="scrollProgress"></div>
+🌐 **Live Portfolio**  
+👉 https://anupkumarsingh595-stack.github.io/Portfolio-website/
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+📧 **Email:** anupkumarsingh595@gmail.com  
+💼 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/anup-kumar-singh-6405b128b/)  
 
-    <section class="hero" id="home">
-        <div class="hero-content">
+---
 
-            <!-- ADDED: PROFILE PHOTO -->
-            <div class="profile-image" aria-hidden="false">
-                <img src="assets/images/profile.jpg" alt="Anup Kumar Singh — Network Architect">
-            </div>
+⚡ *Designing secure networks. Defending systems with AI. Building the future of cybersecurity.* ⚡
 
-            <h1>ANUP KUMAR SINGH</h1>
-            <h2>Network Architect | AI Security Researcher | Cybersecurity Specialist</h2>
-            <div class="typing-text" id="typingText"></div>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn">View Projects</a>
+</div>
 
-                <a href="#contact" class="btn">Get In Touch</a>
-                <a href="resume.pdf" class="btn" download>Download Resume</a>
+---
 
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <h2>🌐 ABOUT ME</h2>
+## 🚀 About Me
 
-        <p>
-            I am a passionate <strong>Network Engineer</strong> with hands-on experience in designing, configuring, and troubleshooting enterprise networks. I focus on building secure, scalable, and high-performance infrastructures using modern routing,
-            switching, and security technologies.
-        </p>
+I am a **Network Engineer and AI Security Researcher** with strong hands-on experience in **enterprise network design, cybersecurity, and AI-driven threat detection**.
 
-        <p>
-            My expertise includes <strong>OSPF, BGP, VLANs, VPN, ACLs, NAT, wireless networking,
-        and network security</strong>. I work confidently with Cisco and Fortinet devices, using tools like Packet Tracer, GNS3, and Wireshark for real-time analysis.
-        </p>
+My work focuses on building **secure, scalable, and high-performance infrastructures**, combining traditional networking expertise with **modern AI security research**.
 
-        <p>
-            I enjoy solving complex network problems and continuously improving my skills through labs, simulations, and real-world configurations. My goal is to deliver reliable, secure, and optimized network solutions for modern environments.
-        </p>
-    </section>
-    <section id="skills">
-        <h2>🛠️ TECHNICAL EXPERTISE</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>🌐 Networking</h3>
-                <p>Enterprise-grade network design, routing & switching</p>
-                <div class="skill-tags">
-                    <span class="tag">TCP/IP</span>
-                    <span class="tag">OSPF</span>
-                    <span class="tag">BGP</span>
-                    <span class="tag">VLAN</span>
-                    <span class="tag">SD-WAN</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🔒 Security</h3>
-                <p>Network security, firewalls, VPN & intrusion detection</p>
-                <div class="skill-tags">
-                    <span class="tag">Cisco ASA</span>
-                    <span class="tag">Fortinet</span>
-                    <span class="tag">IDS/IPS</span>
-                    <span class="tag">VPN</span>
-                    <span class="tag">ACLs</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🤖 AI & ML</h3>
-                <p>AI-powered security, LLM testing & threat detection</p>
-                <div class="skill-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">TensorFlow</span>
-                    <span class="tag">OpenAI</span>
-                    <span class="tag">ML IDS</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>💻 Systems</h3>
-                <p>Server administration, virtualization & cloud platforms</p>
-                <div class="skill-tags">
-                    <span class="tag">Linux</span>
-                    <span class="tag">Windows Server</span>
-                    <span class="tag">VMware</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">AWS</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>📡 Wireless</h3>
-                <p>WLAN deployment, controller config & secure authentication</p>
-                <div class="skill-tags">
-                    <span class="tag">802.11</span>
-                    <span class="tag">WPA3</span>
-                    <span class="tag">RADIUS</span>
-                    <span class="tag">Controllers</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <h3>🔧 Tools</h3>
-                <p>Network monitoring, analysis & troubleshooting tools</p>
-                <div class="skill-tags">
-                    <span class="tag">Wireshark</span>
-                    <span class="tag">GNS3</span>
-                    <span class="tag">SolarWinds</span>
-                    <span class="tag">Packet Tracer</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects">
-        <h2>📂 FEATURED PROJECTS</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>🏢 Enterprise Network Design</h3>
-                <p>Designed secure LAN/WAN network for mid-size organization with OSPF routing, VLAN segmentation, and comprehensive firewall policies.</p>
-                <div class="skill-tags">
-                    <span class="tag">Cisco IOS</span>
-                    <span class="tag">OSPF</span>
-                    <span class="tag">VLANs</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>📶 Campus Wi-Fi Deployment</h3>
-                <p>Deployed wireless network across campus with centralized controller and 802.1X secure authentication system.</p>
-                <div class="skill-tags">
-                    <span class="tag">Wireless</span>
-                    <span class="tag">802.1X</span>
-                    <span class="tag">RADIUS</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>🔐 Firewall & VPN Config</h3>
-                <p>Configured Cisco ASA firewall with advanced security rules and Site-to-Site/Remote VPN connections.</p>
-                <div class="skill-tags">
-                    <span class="tag">Cisco ASA</span>
-                    <span class="tag">IPsec</span>
-                    <span class="tag">SSL VPN</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>📞 VoIP Implementation</h3>
-                <p>Implemented IP Telephony system with QoS policies to optimize voice traffic and ensure call quality.</p>
-                <div class="skill-tags">
-                    <span class="tag">Cisco CallManager</span>
-                    <span class="tag">QoS</span>
-                    <span class="tag">SIP</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>🤖 LLM Vulnerability Testing</h3>
-                <p>Explored adversarial prompts & jailbreak detection in LLMs, built CLI tool for generating security test cases.</p>
-                <div class="skill-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">OpenAI API</span>
-                    <span class="tag">Security</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>🛡️ AI-Powered IDS</h3>
-                <p>Developing machine learning-based intrusion detection system for real-time network anomaly detection.</p>
-                <div class="skill-tags">
-                    <span class="tag">TensorFlow</span>
-                    <span class="tag">Scapy</span>
-                    <span class="tag">ML</span>
-                </div>
-            </div>
-        </div>
-    </section>
+I actively work with real-world labs, simulations, and production-like environments to deliver **reliable and optimized network solutions**.
 
-    <section id="certifications">
-        <h2>🎓 CERTIFICATIONS</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <div class="cert-icon">📜</div>
-                <h3>CCNA</h3>
-                <p>Routing & Switching</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon">🏆</div>
-                <h3>CCNP</h3>
-                <p>Enterprise</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon">⚡</div>
-                <h3>CompTIA Network+</h3>
-                <p>Networking Fundamentals</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon">🔒</div>
-                <h3>Cybersecurity</h3>
-                <p>Fundamentals</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon">🤖</div>
-                <h3>AI for Engineers</h3>
-                <p>Applied AI</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon">🧠</div>
-                <h3>GenAI Mastermind</h3>
-                <p>Generative AI</p>
-            </div>
-        </div>
-    </section>
+---
 
-    <section id="contact">
-        <h2>📧 LET'S CONNECT</h2>
-        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Ready to collaborate on cutting-edge network and AI security projects?</p>
-        <div class="contact-grid">
-            <a href="mailto:anupkumarsingh595@gmail.com" class="contact-item">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📧</div>
-                <h3>Email</h3>
-                <p>anupkumarsingh595@gmail.com</p>
-            </a>
-            <a href="https://www.linkedin.com/in/anup-kumar-singh-6405b128b/" class="contact-item" target="_blank">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">💼</div>
-                <h3>LinkedIn</h3>
-                <p>Connect with me</p>
-            </a>
-            <a href="https://anupkumarsingh595-stack.github.io/Portfolio-website/" class="contact-item" target="_blank">
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌐</div>
-                <h3>Portfolio</h3>
-                <p>View my work</p>
-            </a>
-        </div>
+## 🛠️ Technical Expertise
 
-    </section>
+### 🌐 Networking
+- TCP/IP, Subnetting  
+- OSPF, BGP  
+- VLANs, Inter-VLAN Routing  
+- SD-WAN  
 
-    <script>
-        // Typing Animation
-        const texts = [
-            "Building Secure Networks",
-            "AI-Powered Threat Detection",
-            "Network Automation Expert",
-            "Cybersecurity Researcher",
-            "Cloud Infrastructure Specialist"
-        ];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingSpeed = 100;
-        const deletingSpeed = 50;
-        const pauseTime = 2000;
+### 🔒 Security
+- Cisco ASA, Fortinet Firewalls  
+- VPN (IPsec, SSL)  
+- IDS / IPS  
+- ACLs, NAT  
 
-        function typeText() {
-            const currentText = texts[textIndex];
-            const displayText = isDeleting ?
-                currentText.substring(0, charIndex - 1) :
-                currentText.substring(0, charIndex + 1);
+### 🤖 AI & Machine Learning
+- AI-powered threat detection  
+- LLM vulnerability & jailbreak testing  
+- Adversarial prompt research  
+- Python, TensorFlow, OpenAI API  
 
-            document.getElementById('typingText').innerHTML = displayText + '<span class="cursor">|</span>';
+### 💻 Systems & Cloud
+- Linux & Windows Server  
+- VMware, Virtualization  
+- Docker  
+- AWS (Foundational)  
 
-            if (!isDeleting && charIndex === currentText.length) {
-                setTimeout(() => isDeleting = true, pauseTime);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
+### 📡 Wireless
+- WLAN deployment & design  
+- 802.11 standards  
+- WPA3  
+- RADIUS & 802.1X  
 
-            charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
-            setTimeout(typeText, isDeleting ? deletingSpeed : typingSpeed);
-        }
+### 🔧 Tools
+- Wireshark  
+- GNS3  
+- Cisco Packet Tracer  
+- SolarWinds  
+- Scapy  
 
-        typeText();
+---
 
-        // Matrix Rain Effect
-        const canvas = document.querySelector('.matrix');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+## 📂 Featured Projects
 
-        const chars = '01';
-        const fontSize = 14;
-        const columns = canvas.width / fontSize;
-        const drops = Array(Math.floor(columns)).fill(1);
+### 🏢 Enterprise Network Design
+Designed a secure LAN/WAN architecture for a mid-size organization using dynamic routing and segmentation.
 
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(10, 10, 10, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#00ff41';
-            ctx.font = fontSize + 'px monospace';
+**Tech:** Cisco IOS, OSPF, VLANs  
 
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+---
 
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
+### 📶 Campus Wi-Fi Deployment
+Implemented a large-scale wireless network with centralized control and secure authentication.
 
-        setInterval(drawMatrix, 50);
+**Tech:** Wireless, RADIUS, 802.1X  
 
-        // Scroll Progress
-        window.addEventListener('scroll', () => {
-            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
-        });
+---
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+### 🔐 Firewall & VPN Configuration
+Configured Cisco ASA firewall with advanced security rules and remote connectivity.
 
-        // Create Floating Particles
-        function createParticle() {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 6 + 's';
-            document.querySelector('.hero').appendChild(particle);
-            setTimeout(() => particle.remove(), 6000);
-        }
+**Tech:** Cisco ASA, IPsec, SSL VPN  
 
-        setInterval(createParticle, 300);
+---
 
-        // Resize canvas on window resize
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
-</body>
+### 📞 VoIP Implementation
+Deployed IP Telephony with QoS optimization to ensure call quality.
 
-</html>
+**Tech:** Cisco CallManager, SIP, QoS  
+
+---
+
+### 🤖 LLM Vulnerability Testing
+Researched adversarial prompts and jailbreak techniques in Large Language Models.  
+Built a CLI tool for automated security test generation.
+
+**Tech:** Python, OpenAI API, AI Security  
+
+---
+
+### 🛡️ AI-Powered Intrusion Detection System
+Developing a machine-learning-based IDS for real-time anomaly detection.
+
+**Tech:** TensorFlow, Scapy, Machine Learning  
+
+---
+
+## 🎓 Certifications
+
+- ✅ **CCNA** – Routing & Switching  
+- 🏆 **CCNP Enterprise**  
+- ⚡ **CompTIA Network+**  
+- 🔒 **Cybersecurity Fundamentals**  
+- 🤖 **AI for Engineers**  
+- 🧠 **GenAI Mastermind – Generative AI**  
+
+---
+
+## 📧 Let’s Connect
+
+I’m open to collaboration on:
+- Network Engineering Projects  
+- Cybersecurity & Firewall Design  
+- AI-Powered Security Research  
+- LLM Security & Red-Team Testing  
+
+📩 **Email:** anupkumarsingh595@gmail.com  
+💼 **LinkedIn:** https://www.linkedin.com/in/anup-kumar-singh-6405b128b/  
+🌐 **Portfolio:** https://anupkumarsingh595-stack.github.io/Portfolio-website/  
+
+---
+
+<div align="center">
+
+### ⭐ If you like this portfolio, consider giving the repository a star ⭐  
+*Your support helps visibility and growth.*
+
+</div>
