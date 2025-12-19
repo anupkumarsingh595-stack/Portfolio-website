@@ -1,7 +1,7 @@
 <div align="center">
 
 # 👨‍💻 ANUP KUMAR SINGH  
-### Network Architect | AI Security Researcher | Cybersecurity Specialist
+### BCA Student | Aspiring Network Engineer | CCNA |CCNP Learning & Growing in IT Networking | IT & Desktop Support |
 
 🌐 **Live Portfolio**  
 👉 https://anupkumarsingh595-stack.github.io/Portfolio-website/
@@ -19,11 +19,13 @@
 
 ## 🚀 About Me
 
-I am a **Network Engineer and AI Security Researcher** with strong hands-on experience in **enterprise network design, cybersecurity, and AI-driven threat detection**.
+Network & Cloud Infrastructure Engineer with hands-on experience in networking, desktop support, and IT operations.
 
-My work focuses on building **secure, scalable, and high-performance infrastructures**, combining traditional networking expertise with **modern AI security research**.
+I work with routing, switching, network troubleshooting, and basic network security, along with supporting end users, systems, and connectivity in enterprise environments. I also have exposure to cloud networking concepts and infrastructure fundamentals.
 
-I actively work with real-world labs, simulations, and production-like environments to deliver **reliable and optimized network solutions**.
+Currently building strong expertise in networking technologies and preparing for CCNA and CCNP, I focus on developing reliable, secure, and scalable network solutions through practical labs and real-world scenarios.
+
+Open to opportunities in Desktop Support, Network Support, and Network Infrastructure roles.**.
 
 ---
 
