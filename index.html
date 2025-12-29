@@ -124,35 +124,46 @@
 
         /* PROFILE IMAGE */
         .profile-image {
-            width: 180px;
-            height: 180px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
-            margin: 0 auto 1.2rem;
-            border: 5px solid rgba(0, 217, 255, 0.9);
-            box-shadow: 0 0 30px rgba(0, 217, 255, 0.35), 0 0 60px rgba(0, 255, 65, 0.2);
+            margin: 5% auto 1.5rem;
+            border: 6px solid #00ff41;
+            box-shadow: 0 0 40px rgba(0, 255, 65, 0.6),
+                0 0 80px rgba(0, 217, 255, 0.4),
+                0 0 120px rgba(255, 16, 240, 0.2);
             overflow: hidden;
-            display: inline-block;
+            display: block;
             animation: profileGlow 3s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
+            background: #0a0a0a;
         }
 
         @keyframes profileGlow {
 
             0%,
             100% {
-                box-shadow: 0 0 30px rgba(0, 217, 255, 0.35), 0 0 60px rgba(0, 255, 65, 0.2);
+                box-shadow: 0 0 40px rgba(0, 255, 65, 0.6),
+                    0 0 80px rgba(0, 217, 255, 0.4),
+                    0 0 120px rgba(255, 16, 240, 0.2);
+                border-color: #00ff41;
             }
 
             50% {
-                box-shadow: 0 0 40px rgba(0, 217, 255, 0.5), 0 0 80px rgba(0, 255, 65, 0.3);
+                box-shadow: 0 0 60px rgba(0, 255, 65, 0.8),
+                    0 0 100px rgba(0, 217, 255, 0.6),
+                    0 0 140px rgba(255, 16, 240, 0.3);
+                border-color: #00d9ff;
             }
         }
 
         .profile-image img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
+            object-position: center 35%;
             display: block;
-            background: #0a0a0a;
         }
 
         .hero-content h1 {
@@ -771,7 +782,7 @@
         <div class="hero-content">
             <!-- PROFILE PHOTO -->
             <div class="profile-image">
-                <img src="anup.jpg" alt="Anup Kumar Singh — Network Engineer">
+                <img src="profile-photo.jpg" alt="Anup Kumar Singh — Network Engineer">
             </div>
 
             <h1>ANUP KUMAR SINGH</h1>
@@ -1007,7 +1018,7 @@
             <div class="footer-section footer-about">
                 <h3>About Me</h3>
                 <div class="footer-profile">
-                    <img src="anup.jpg" alt="Anup Kumar Singh">
+                    <img src="profile-photo.jpg" alt="Anup Kumar Singh">
                     <div class="footer-profile-info">
                         <h4>Anup Kumar Singh</h4>
                         <p>Network Engineer</p>
