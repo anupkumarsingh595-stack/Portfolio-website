@@ -7,7 +7,7 @@
 👉 https://anupkumarsingh595-stack.github.io/Portfolio-website/
 
 📧 **Email:** anupkumarsingh595@gmail.com  
-💼 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/anup-kumar-singh-6405b128b/)  
+💼 **LinkedIn:**(https://www.linkedin.com/in/anup-kumar-singh-6405b128b/)  
 
 ---
 
