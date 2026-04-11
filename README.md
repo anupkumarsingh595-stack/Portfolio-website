@@ -4,7 +4,7 @@
 ### BCA Student | Aspiring Network Engineer | CCNA |CCNP Learning & Growing in IT Networking | IT & Desktop Support |
 
 🌐 **Live Portfolio**  
-👉 https://anupkumarsingh595-stack.github.io/Portfolio-website/
+👉[ https://anupkumarsingh595-stack.github.io/Portfolio-website/](https://ak-neteng.github.io/Portfolio-website/)
 
 📧 **Email:** anupkumarsingh595@gmail.com  
 💼 **LinkedIn:**(https://www.linkedin.com/in/anup-kumar-singh-6405b128b/)  
